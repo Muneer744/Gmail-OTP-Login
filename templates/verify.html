@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Verify OTP</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <div class="icon">
+                🔐
+            </div>
+
+            <h1>Verify OTP</h1>
+
+            <p class="subtitle">
+                Enter the 6-digit code sent to
+            </p>
+
+            <p class="email-display">
+                {{ email }}
+            </p>
+
+
+            {% with messages = get_flashed_messages() %}
+
+                {% if messages %}
+
+                    {% for message in messages %}
+
+                        <div class="message">
+                            {{ message }}
+                        </div>
+
+                    {% endfor %}
+
+                {% endif %}
+
+            {% endwith %}
+
+
+            <form action="/verify-otp"
+                  method="POST">
+
+                <label for="otp">
+                    Verification Code
+                </label>
+
+                <input
+                    type="text"
+                    id="otp"
+                    name="otp"
+                    placeholder="Enter 6-digit OTP"
+                    maxlength="6"
+                    inputmode="numeric"
+                    autocomplete="one-time-code"
+                    required
+                >
+
+                <button type="submit">
+                    Verify OTP
+                </button>
+
+            </form>
+
+
+            <p class="security">
+                ⏱️ Your OTP is valid for 5 minutes
+            </p>
+
+
+            <a href="/">
+                Use a different Gmail
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

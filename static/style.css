@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #667eea,
+            #764ba2
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+.auth-container {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.auth-card {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    background: white;
+
+    padding: 42px;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 25px 60px rgba(
+            0,
+            0,
+            0,
+            0.20
+        );
+
+}
+
+
+.auth-logo {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 18px;
+
+    background: #f0f2ff;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 32px;
+}
+
+
+h1 {
+
+    text-align: center;
+
+    font-size: 30px;
+
+    color: #222;
+
+    margin-bottom: 8px;
+}
+
+
+.auth-subtitle {
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+.form-group {
+
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #333;
+
+    margin-bottom: 8px;
+}
+
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+input:focus {
+
+    border-color: #667eea;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            102,
+            126,
+            234,
+            0.12
+        );
+}
+
+
+.password-wrapper {
+
+    position: relative;
+}
+
+
+.password-wrapper input {
+
+    padding-right: 50px;
+}
+
+
+.show-password {
+
+    position: absolute;
+
+    right: 10px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    width: auto;
+
+    padding: 5px;
+}
+
+
+.login-options {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    font-size: 13px;
+}
+
+
+.remember {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #666;
+}
+
+
+.remember input {
+
+    width: auto;
+}
+
+
+.login-options a {
+
+    color: #667eea;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+
+.login-button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #667eea;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.login-button:hover {
+
+    background: #5568d9;
+
+    transform: translateY(-1px);
+}
+
+
+.register-text {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 14px;
+
+    color: #777;
+}
+
+
+.register-text a {
+
+    color: #667eea;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+.security-text {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 12px;
+
+    color: #999;
+}
+
+
+.message {
+
+    background: #ffe8e8;
+
+    color: #c62828;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+
+@media (max-width: 500px) {
+
+    .auth-card {
+
+        padding: 30px 22px;
+
+    }
+
+    h1 {
+
+        font-size: 26px;
+
+    }
+
+}
